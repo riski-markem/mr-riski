@@ -1,17 +1,17 @@
 /* ══════════════════════════════════════════════════════════════
-   MORNING ROUND DIGITAL — style-neubrutalism.css  v3.0
+   MORNING ROUND DIGITAL — style-neubrutalism.css  v3.1 PASTEL
    PT. RISKI HARIYANTO
-   CONSISTENT NEUBRUTALISM — Vibrant High-Contrast System
+   SOFT NEUBRUTALISM — Pastel Palette, Calm & Friendly
    ══════════════════════════════════════════════════════════════
    
    DESIGN RULES (enforced throughout):
    ✓ Font: Lexend ExtraBold (800) for headings & numbers
    ✓ Font: Lexend SemiBold (600) for body & labels
-   ✓ All text: #000000 (hitam pekat)
-   ✓ All cards/buttons: border 3px solid #000000
-   ✓ Stat cards: box-shadow: 6px 6px 0px 0px #000000
-   ✓ Background: #FEF9EF (krem gading bersih)
-   ✓ Palette: Vibrant — kuning, hijau neon, merah terang, cyan
+   ✓ All text: #1A1A2E (near-black, sedikit lebih hangat)
+   ✓ All cards/buttons: border 3px solid #1A1A2E
+   ✓ Stat cards: box-shadow: 6px 6px 0px 0px #1A1A2E
+   ✓ Background: #F5F0FF (lavender putih lembut)
+   ✓ Palette: Pastel — kuning mentega, hijau mint, merah dusty rose, biru langit
    ══════════════════════════════════════════════════════════════ */
 
 /* ── GOOGLE FONTS: Lexend (pengganti Space Grotesk) ── */
@@ -26,46 +26,46 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   DESIGN TOKENS — CONSISTENT NEUBRUTALISM
+   DESIGN TOKENS — SOFT NEUBRUTALISM (PASTEL)
    ══════════════════════════════════════════════════════════════ */
 :root {
-  /* ═══ PALET VIBRANT (High-Contrast, Seragam) ═══
-     Aturan: semua warna harus kuat & jenuh (saturation >70%).
-     Tidak ada warna pucat campur warna mencolok.           */
-  --c-bg:       #FEF9EF;   /* Krem gading — background bersih    */
-  --c-surface:  #FFFFFF;   /* Putih — card surface               */
-  --c-black:    #000000;   /* Hitam pekat — border & teks        */
+  /* ═══ PALET PASTEL (Soft, Calm, Friendly) ═══
+     Aturan: warna lembut & desaturated, tetap memiliki karakter.
+     Garis tepi & shadow tetap kuat — struktur blok dipertahankan. */
+  --c-bg:       #F5F0FF;   /* Lavender putih — background utama      */
+  --c-surface:  #FEFEFE;   /* Putih bersih — card surface            */
+  --c-black:    #1A1A2E;   /* Near-black navy — border & teks        */
 
-  /* Warna aksen VIBRANT */
-  --c-yellow:   #F5E642;   /* Kuning vibrant — aksen utama       */
-  --c-green:    #2EFF6C;   /* Hijau neon — sukses / OK           */
-  --c-red:      #FF2D2D;   /* Merah terang — error / high        */
-  --c-blue:     #00C2FF;   /* Cyan — info / low priority         */
-  --c-orange:   #FF7A00;   /* Orange — medium / peringatan       */
-  --c-pink:     #FF3CAC;   /* Pink — aksen sekunder              */
-  --c-purple:   #A855F7;   /* Ungu — kategori moral              */
+  /* Warna aksen PASTEL */
+  --c-yellow:   #FDE68A;   /* Kuning mentega — aksen utama           */
+  --c-green:    #A7F3D0;   /* Hijau mint — sukses / OK               */
+  --c-red:      #FECACA;   /* Dusty rose — error / high              */
+  --c-blue:     #BAE6FD;   /* Biru langit — info / low priority      */
+  --c-orange:   #FED7AA;   /* Peach — medium / peringatan            */
+  --c-pink:     #FBCFE8;   /* Pink lembut — aksen sekunder           */
+  --c-purple:   #DDD6FE;   /* Lavender — kategori moral              */
 
   /* Warna stat semantik (dipakai langsung di HTML via var()) */
   --lime:       var(--c-green);
   --yellow:     var(--c-yellow);
   --red:        var(--c-red);
-  --blue:       #1E40AF;
+  --blue:       #93C5FD;
   --orange:     var(--c-orange);
   --black:      var(--c-black);
   --white:      var(--c-surface);
   --cream:      var(--c-bg);
-  --muted:      #555555;
+  --muted:      #6B7280;
 
   /* ═══ BORDER SYSTEM ═══ */
-  --border:        3px solid #000000;   /* border standar            */
-  --border-thick:  4px solid #000000;   /* border tebal              */
-  --border-2:      2px solid #000000;   /* border tipis (badge dll)  */
+  --border:        3px solid #1A1A2E;   /* border standar            */
+  --border-thick:  4px solid #1A1A2E;   /* border tebal              */
+  --border-2:      2px solid #1A1A2E;   /* border tipis (badge dll)  */
 
   /* ═══ SHADOW SYSTEM ═══ */
-  --shadow-card:   6px 6px 0px 0px #000000;   /* stat cards (sesuai spec) */
-  --shadow-sm:     3px 3px 0px 0px #000000;   /* tombol kecil, badge      */
-  --shadow-lg:     8px 8px 0px 0px #000000;   /* elevasi tinggi           */
-  --shadow-hover:  8px 8px 0px 0px #000000;   /* hover state              */
+  --shadow-card:   6px 6px 0px 0px #1A1A2E;   /* stat cards          */
+  --shadow-sm:     3px 3px 0px 0px #1A1A2E;   /* tombol kecil, badge */
+  --shadow-lg:     8px 8px 0px 0px #1A1A2E;   /* elevasi tinggi      */
+  --shadow-hover:  8px 8px 0px 0px #1A1A2E;   /* hover state         */
 
   /* ═══ TYPOGRAPHY ═══ */
   --font-sans: 'Lexend', system-ui, sans-serif;
@@ -97,7 +97,7 @@ html {
 body {
   height: 100%;
   min-height: 100dvh;
-  background: #111111;
+  background: #C4B5FD;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,7 +177,7 @@ body {
    TOP BAR — flex-shrink:0 agar tidak ikut scroll
    ══════════════════════════════════════════════════════════════ */
 .nb-topbar {
-  background: var(--c-black);
+  background: var(--c-purple);
   border-bottom: var(--border);
   padding: 14px var(--space-4);
   display: flex;
@@ -190,7 +190,7 @@ body {
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.3px;
-  color: var(--c-yellow);
+  color: var(--c-black);
   font-family: var(--font-sans);
   text-transform: uppercase;
 }
@@ -204,7 +204,7 @@ body {
   border: var(--border-2);
   border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--c-yellow);
+  color: var(--c-black);
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 700;
@@ -265,7 +265,7 @@ body {
   transform: translateX(-50%);
   width: 28px;
   height: 3px;
-  background: var(--c-yellow);
+  background: var(--c-purple);
   border: 1px solid var(--c-black);
   border-radius: 2px;
 }
@@ -319,7 +319,7 @@ body {
 .nb-btn-blue:hover { background: var(--c-yellow); }
 
 .nb-btn-black  { background: var(--c-black); color: var(--c-yellow); border-color: var(--c-black); }
-.nb-btn-black:hover { background: #333333; color: var(--c-yellow); }
+.nb-btn-black:hover { background: #2D2D4E; color: var(--c-yellow); }
 
 .nb-btn-success { background: var(--c-green); color: var(--c-black); }
 .nb-btn-success:hover { background: var(--c-yellow); }
@@ -361,7 +361,7 @@ body {
 .nb-input:focus, .nb-select:focus, .nb-textarea:focus {
   outline: none;
   border-width: 4px;
-  background: rgba(245, 230, 66, 0.15);
+  background: rgba(253, 230, 138, 0.25);
   box-shadow: 5px 5px 0px var(--c-black);
 }
 .nb-input::placeholder { color: #999999; font-weight: 500; }
@@ -420,14 +420,14 @@ body {
   border: var(--border);
   border-radius: var(--radius);
   padding: var(--space-4);
-  box-shadow: 6px 6px 0px 0px #000000;   /* WAJIB sesuai spec */
+  box-shadow: 6px 6px 0px 0px #1A1A2E;   /* WAJIB sesuai spec */
   text-align: center;
   transition: all 0.1s ease;
   cursor: default;
 }
 .stat-box:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0px 0px #000000;
+  box-shadow: 8px 8px 0px 0px #1A1A2E;
 }
 .stat-box:active {
   transform: translate(4px, 4px);
@@ -488,7 +488,7 @@ body {
 .cat-quality   { background: var(--c-blue);   color: var(--c-black); }
 .cat-safety    { background: var(--c-red);    color: var(--c-black); }
 .cat-efisiensi { background: var(--c-green);  color: var(--c-black); }
-.cat-moral     { background: #D8B4FE;          color: var(--c-black); }
+.cat-moral     { background: var(--c-purple);  color: var(--c-black); }
 .cat-5r        { background: #E5E7EB;          color: var(--c-black); }
 
 /* ══════════════════════════════════════════════════════════════
@@ -520,7 +520,7 @@ body {
 }
 .nb-progress-fill {
   height: 100%;
-  background: var(--c-green);
+  background: var(--c-purple);
   transition: width 0.4s ease;
   border-right: 2px solid var(--c-black);
 }
@@ -608,12 +608,12 @@ body {
 .nb-toggle-opt:hover      { background: var(--c-yellow); }
 .nb-toggle-opt.sel-ok     { background: var(--c-green);  color: var(--c-black); }
 .nb-toggle-opt.sel-no     { background: var(--c-red);    color: var(--c-black); }
-.nb-toggle-opt.sel-na     { background: var(--c-black);  color: var(--c-yellow); }
+.nb-toggle-opt.sel-na     { background: var(--c-purple);  color: var(--c-black); }
 
 /* ── Finding Panel ── */
 .finding-panel {
   border-top: var(--border);
-  background: #FFF0F0;
+  background: #FEE2E2;
   padding: var(--space-4);
   display: none;
 }
@@ -708,7 +708,7 @@ body {
 .notif-dot {
   width: 10px; height: 10px;
   border-radius: 3px;
-  background: var(--c-red);
+  background: var(--c-purple);
   border: 2px solid var(--c-black);
   flex-shrink: 0;
   margin-top: 3px;
@@ -721,7 +721,7 @@ body {
   width: 44px; height: 44px;
   border-radius: 50%;
   border: 3px solid var(--c-black);
-  background: var(--c-pink);
+  background: var(--c-purple);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -749,7 +749,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--c-yellow);
+  background: var(--c-purple);
   border-bottom: var(--border);
 }
 .temuan-body { padding: 14px 16px; }
@@ -795,7 +795,7 @@ body {
   border-style: dashed;
   border-radius: var(--radius);
   padding: var(--space-4);
-  background: #FFFBEA;
+  background: #EDE9FE;
   margin-top: 12px;
 }
 .capa-tab {
@@ -825,7 +825,7 @@ body {
 }
 .capa-tab-btn:last-child { border-right: none; }
 .capa-tab-btn:hover      { background: var(--c-yellow); }
-.capa-tab-btn.active     { background: var(--c-black); color: var(--c-yellow); }
+.capa-tab-btn.active     { background: var(--c-purple); color: var(--c-black); }
 
 /* ══════════════════════════════════════════════════════════════
    DUE DATE — Inline chips dengan border
@@ -865,14 +865,14 @@ body {
   display: flex;
   gap: 8px;
   padding: 12px var(--space-4);
-  background: var(--c-black);
+  background: var(--c-purple);
   border-bottom: var(--border);
   overflow-x: auto;
   flex-shrink: 0;
 }
 .filter-bar::-webkit-scrollbar { display: none; }
 .filter-btn {
-  border: 2px solid var(--c-yellow);
+  border: 2px solid var(--c-black);
   border-radius: var(--radius-sm);
   font-family: var(--font-sans);
   font-size: 10px;
@@ -880,12 +880,12 @@ body {
   padding: 7px 13px;
   cursor: pointer;
   background: transparent;
-  color: var(--c-yellow);
+  color: var(--c-black);
   white-space: nowrap;
   transition: all 0.1s ease;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  box-shadow: 2px 2px 0px var(--c-yellow);
+  box-shadow: 2px 2px 0px var(--c-black);
 }
 .filter-btn:hover  { background: var(--c-yellow); color: var(--c-black); transform: translateY(-2px); }
 .filter-btn.active { background: var(--c-yellow); color: var(--c-black); transform: translate(2px,2px); box-shadow: none; }
@@ -894,7 +894,7 @@ body {
    ROLE TABS
    ══════════════════════════════════════════════════════════════ */
 .role-tabs {
-  background: var(--c-black);
+  background: var(--c-purple);
   padding: 12px var(--space-4);
   display: flex;
   gap: 8px;
@@ -914,8 +914,8 @@ body {
 }
 .role-tab.inactive {
   background: transparent;
-  border: 2px solid var(--c-yellow);
-  color: var(--c-yellow);
+  border: 2px solid var(--c-black);
+  color: var(--c-black);
   box-shadow: none;
 }
 
@@ -951,7 +951,7 @@ body {
   margin-bottom: 14px;
 }
 .widget-header {
-  background: var(--c-black);
+  background: var(--c-purple);
   padding: 11px var(--space-4);
   display: flex;
   align-items: center;
@@ -961,7 +961,7 @@ body {
 .widget-header-title {
   font-size: 12px;
   font-weight: 800;
-  color: var(--c-yellow);
+  color: var(--c-black);
   font-family: var(--font-sans);
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -990,9 +990,9 @@ body {
   box-shadow: var(--shadow-sm);
   margin-bottom: 10px;
 }
-.sign-pad:hover { background: rgba(245, 230, 66, 0.15); }
+.sign-pad:hover { background: rgba(253, 230, 138, 0.2); }
 .sign-pad canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
-.sign-pad.signed { background: rgba(46, 255, 108, 0.15); border-style: solid; }
+.sign-pad.signed { background: rgba(167, 243, 208, 0.3); border-style: solid; }
 .sign-pad-clear {
   position: absolute; top: 8px; right: 8px; z-index: 5;
   font-size: 9px; padding: 5px 9px;
@@ -1014,7 +1014,7 @@ body {
   bottom: 78px;
   width: 58px; height: 58px;
   border-radius: 50%;
-  background: var(--c-yellow);
+  background: var(--c-purple);
   border: 4px solid var(--c-black);
   color: var(--c-black);
   font-size: 26px;
@@ -1095,7 +1095,7 @@ body {
    LOGIN SCREEN
    ══════════════════════════════════════════════════════════════ */
 .login-wrap {
-  background: var(--c-black);
+  background: var(--c-purple);
   flex: 1;
   display: flex;
   flex-direction: column;
