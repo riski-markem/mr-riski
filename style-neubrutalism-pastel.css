@@ -1,17 +1,18 @@
 /* ══════════════════════════════════════════════════════════════
-   MORNING ROUND DIGITAL — style-neubrutalism.css  v3.1 PASTEL
+   MORNING ROUND DIGITAL — style-neubrutalism.css  v3.2 PRO
    PT. RISKI HARIYANTO
-   SOFT NEUBRUTALISM — Pastel Palette, Calm & Friendly
+   PROFESSIONAL SOFT NEUBRUTALISM — Industrial Pastel
    ══════════════════════════════════════════════════════════════
    
    DESIGN RULES (enforced throughout):
    ✓ Font: Lexend ExtraBold (800) for headings & numbers
    ✓ Font: Lexend SemiBold (600) for body & labels
-   ✓ All text: #1A1A2E (near-black, sedikit lebih hangat)
-   ✓ All cards/buttons: border 3px solid #1A1A2E
-   ✓ Stat cards: box-shadow: 6px 6px 0px 0px #1A1A2E
-   ✓ Background: #F5F0FF (lavender putih lembut)
-   ✓ Palette: Pastel — kuning mentega, hijau mint, merah dusty rose, biru langit
+   ✓ All text: #111111 (hitam pekat — kontras maksimal)
+   ✓ All cards/buttons: border 3px solid #111111
+   ✓ Stat cards: box-shadow: 6px 6px 0px 0px #111111
+   ✓ Background: #F4F2ED (off-white gading — bersih & profesional)
+   ✓ Palette: Muted Pastel Fungsional — amber, sage, coral, steel blue
+   ✓ Stat numbers: font-size diperbesar untuk baca sekilas di lapangan
    ══════════════════════════════════════════════════════════════ */
 
 /* ── GOOGLE FONTS: Lexend (pengganti Space Grotesk) ── */
@@ -26,46 +27,52 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   DESIGN TOKENS — SOFT NEUBRUTALISM (PASTEL)
+   DESIGN TOKENS — PROFESSIONAL SOFT NEUBRUTALISM
    ══════════════════════════════════════════════════════════════ */
 :root {
-  /* ═══ PALET PASTEL (Soft, Calm, Friendly) ═══
-     Aturan: warna lembut & desaturated, tetap memiliki karakter.
-     Garis tepi & shadow tetap kuat — struktur blok dipertahankan. */
-  --c-bg:       #F5F0FF;   /* Lavender putih — background utama      */
-  --c-surface:  #FEFEFE;   /* Putih bersih — card surface            */
-  --c-black:    #1A1A2E;   /* Near-black navy — border & teks        */
+  /* ═══ PALET INDUSTRIAL PASTEL ═══
+     Filosofi: Warna fungsional & semantik. Tiap warna punya makna.
+     Background netral agar kartu berwarna menonjol sendiri.
+     Border & shadow tetap hitam pekat — karakter Neubrutalism terjaga. */
 
-  /* Warna aksen PASTEL */
-  --c-yellow:   #FDE68A;   /* Kuning mentega — aksen utama           */
-  --c-green:    #A7F3D0;   /* Hijau mint — sukses / OK               */
-  --c-red:      #FECACA;   /* Dusty rose — error / high              */
-  --c-blue:     #BAE6FD;   /* Biru langit — info / low priority      */
-  --c-orange:   #FED7AA;   /* Peach — medium / peringatan            */
-  --c-pink:     #FBCFE8;   /* Pink lembut — aksen sekunder           */
-  --c-purple:   #DDD6FE;   /* Lavender — kategori moral              */
+  --c-bg:       #F4F2ED;   /* Off-white gading — profesional & bersih  */
+  --c-surface:  #FFFFFF;   /* Putih murni — card surface               */
+  --c-black:    #111111;   /* Hitam pekat — border, shadow, teks utama */
 
-  /* Warna stat semantik (dipakai langsung di HTML via var()) */
+  /* ── Warna FUNGSIONAL (muted, professional) ── */
+  --c-yellow:   #F5D878;   /* Amber redup — aksen utama / info general  */
+  --c-green:    #9EDBB8;   /* Sage green — selesai / OK / rendah        */
+  --c-red:      #F2A39A;   /* Coral tegas — overdue / tinggi / error    */
+  --c-blue:     #9BC4E2;   /* Steel blue — informasi / medium-low       */
+  --c-orange:   #F5B87A;   /* Terracotta — medium / peringatan          */
+  --c-pink:     #E8AECB;   /* Dusty rose — sekunder                     */
+  --c-purple:   #B8B0E0;   /* Slate purple — moral / label netral       */
+
+  /* ── Warna TOPBAR / CHROME (bukan hitam pekat, tapi tetap tegas) ── */
+  --c-chrome:   #2C2C3A;   /* Charcoal navy — topbar, widget header     */
+  --c-chrome-text: #F4F2ED; /* Off-white — teks di atas chrome          */
+
+  /* Alias semantik (dipakai langsung di HTML) */
   --lime:       var(--c-green);
   --yellow:     var(--c-yellow);
   --red:        var(--c-red);
-  --blue:       #93C5FD;
+  --blue:       var(--c-blue);
   --orange:     var(--c-orange);
   --black:      var(--c-black);
   --white:      var(--c-surface);
   --cream:      var(--c-bg);
-  --muted:      #6B7280;
+  --muted:      #5A5A6A;
 
-  /* ═══ BORDER SYSTEM ═══ */
-  --border:        3px solid #1A1A2E;   /* border standar            */
-  --border-thick:  4px solid #1A1A2E;   /* border tebal              */
-  --border-2:      2px solid #1A1A2E;   /* border tipis (badge dll)  */
+  /* ═══ BORDER SYSTEM — hitam pekat, karakter kuat ═══ */
+  --border:        3px solid #111111;
+  --border-thick:  4px solid #111111;
+  --border-2:      2px solid #111111;
 
-  /* ═══ SHADOW SYSTEM ═══ */
-  --shadow-card:   6px 6px 0px 0px #1A1A2E;   /* stat cards          */
-  --shadow-sm:     3px 3px 0px 0px #1A1A2E;   /* tombol kecil, badge */
-  --shadow-lg:     8px 8px 0px 0px #1A1A2E;   /* elevasi tinggi      */
-  --shadow-hover:  8px 8px 0px 0px #1A1A2E;   /* hover state         */
+  /* ═══ SHADOW SYSTEM — hitam pekat, elevasi jelas ═══ */
+  --shadow-card:   6px 6px 0px 0px #111111;
+  --shadow-sm:     3px 3px 0px 0px #111111;
+  --shadow-lg:     8px 8px 0px 0px #111111;
+  --shadow-hover:  8px 8px 0px 0px #111111;
 
   /* ═══ TYPOGRAPHY ═══ */
   --font-sans: 'Lexend', system-ui, sans-serif;
@@ -97,7 +104,7 @@ html {
 body {
   height: 100%;
   min-height: 100dvh;
-  background: #C4B5FD;
+  background: #2C2C3A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,7 +184,7 @@ body {
    TOP BAR — flex-shrink:0 agar tidak ikut scroll
    ══════════════════════════════════════════════════════════════ */
 .nb-topbar {
-  background: var(--c-purple);
+  background: var(--c-chrome);
   border-bottom: var(--border);
   padding: 14px var(--space-4);
   display: flex;
@@ -190,7 +197,7 @@ body {
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.3px;
-  color: var(--c-black);
+  color: var(--c-chrome-text);
   font-family: var(--font-sans);
   text-transform: uppercase;
 }
@@ -204,7 +211,7 @@ body {
   border: var(--border-2);
   border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--c-black);
+  color: var(--c-chrome-text);
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 700;
@@ -265,7 +272,7 @@ body {
   transform: translateX(-50%);
   width: 28px;
   height: 3px;
-  background: var(--c-purple);
+  background: var(--c-yellow);
   border: 1px solid var(--c-black);
   border-radius: 2px;
 }
@@ -318,8 +325,8 @@ body {
 .nb-btn-blue   { background: var(--c-blue); color: var(--c-black); }
 .nb-btn-blue:hover { background: var(--c-yellow); }
 
-.nb-btn-black  { background: var(--c-black); color: var(--c-yellow); border-color: var(--c-black); }
-.nb-btn-black:hover { background: #2D2D4E; color: var(--c-yellow); }
+.nb-btn-black  { background: var(--c-black); color: var(--c-chrome-text); border-color: var(--c-black); }
+.nb-btn-black:hover { background: #2C2C3A; color: var(--c-chrome-text); }
 
 .nb-btn-success { background: var(--c-green); color: var(--c-black); }
 .nb-btn-success:hover { background: var(--c-yellow); }
@@ -420,29 +427,29 @@ body {
   border: var(--border);
   border-radius: var(--radius);
   padding: var(--space-4);
-  box-shadow: 6px 6px 0px 0px #1A1A2E;   /* WAJIB sesuai spec */
+  box-shadow: 6px 6px 0px 0px #111111;   /* WAJIB sesuai spec */
   text-align: center;
   transition: all 0.1s ease;
   cursor: default;
 }
 .stat-box:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0px 0px #1A1A2E;
+  box-shadow: 8px 8px 0px 0px #111111;
 }
 .stat-box:active {
   transform: translate(4px, 4px);
   box-shadow: none;
 }
 
-/* Stat number — Lexend ExtraBold */
+/* Stat number — Lexend ExtraBold — BESAR untuk baca sekilas di lapangan */
 .stat-num {
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 800;
   line-height: 1;
   font-family: var(--font-sans);
   color: var(--c-black);
   margin-bottom: 4px;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 }
 
 /* Stat label */
@@ -473,23 +480,23 @@ body {
   color: var(--c-black);
 }
 
-/* ── Priority badges (warna jenuh, teks hitam) ── */
-.prio-high   { background: var(--c-red);    color: var(--c-black); }
-.prio-medium { background: var(--c-orange); color: var(--c-black); }
-.prio-low    { background: var(--c-blue);   color: var(--c-black); }
+/* ── Priority badges — semantik fungsional, teks hitam pekat ── */
+.prio-high   { background: var(--c-red);    color: #111111; }
+.prio-medium { background: var(--c-orange); color: #111111; }
+.prio-low    { background: var(--c-blue);   color: #111111; }
 
 /* ── Status badges ── */
-.status-open     { background: var(--c-red);    color: var(--c-black); }
-.status-progress { background: var(--c-orange); color: var(--c-black); }
-.status-closed   { background: var(--c-green);  color: var(--c-black); }
+.status-open     { background: var(--c-red);    color: #111111; }
+.status-progress { background: var(--c-orange); color: #111111; }
+.status-closed   { background: var(--c-green);  color: #111111; }
 
-/* ── Category badges ── */
-.cat-delivery  { background: var(--c-yellow); color: var(--c-black); }
-.cat-quality   { background: var(--c-blue);   color: var(--c-black); }
-.cat-safety    { background: var(--c-red);    color: var(--c-black); }
-.cat-efisiensi { background: var(--c-green);  color: var(--c-black); }
-.cat-moral     { background: var(--c-purple);  color: var(--c-black); }
-.cat-5r        { background: #E5E7EB;          color: var(--c-black); }
+/* ── Category badges — semua teks hitam pekat untuk kontras maksimal ── */
+.cat-delivery  { background: var(--c-yellow); color: #111111; }
+.cat-quality   { background: var(--c-blue);   color: #111111; }
+.cat-safety    { background: var(--c-red);    color: #111111; }
+.cat-efisiensi { background: var(--c-green);  color: #111111; }
+.cat-moral     { background: var(--c-purple); color: #111111; }
+.cat-5r        { background: #E0DED9;          color: #111111; }
 
 /* ══════════════════════════════════════════════════════════════
    SECTION HEADER
@@ -503,7 +510,7 @@ body {
   text-transform: uppercase;
   color: var(--c-black);
   font-family: var(--font-sans);
-  border-bottom: 3px solid var(--c-black);
+  border-bottom: 3px solid var(--c-yellow);
   padding-bottom: 6px;
 }
 
@@ -520,7 +527,7 @@ body {
 }
 .nb-progress-fill {
   height: 100%;
-  background: var(--c-purple);
+  background: var(--c-yellow);
   transition: width 0.4s ease;
   border-right: 2px solid var(--c-black);
 }
@@ -608,7 +615,7 @@ body {
 .nb-toggle-opt:hover      { background: var(--c-yellow); }
 .nb-toggle-opt.sel-ok     { background: var(--c-green);  color: var(--c-black); }
 .nb-toggle-opt.sel-no     { background: var(--c-red);    color: var(--c-black); }
-.nb-toggle-opt.sel-na     { background: var(--c-purple);  color: var(--c-black); }
+.nb-toggle-opt.sel-na     { background: var(--c-chrome); color: var(--c-chrome-text); }
 
 /* ── Finding Panel ── */
 .finding-panel {
@@ -708,7 +715,7 @@ body {
 .notif-dot {
   width: 10px; height: 10px;
   border-radius: 3px;
-  background: var(--c-purple);
+  background: var(--c-red);
   border: 2px solid var(--c-black);
   flex-shrink: 0;
   margin-top: 3px;
@@ -721,7 +728,7 @@ body {
   width: 44px; height: 44px;
   border-radius: 50%;
   border: 3px solid var(--c-black);
-  background: var(--c-purple);
+  background: var(--c-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -749,7 +756,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--c-purple);
+  background: var(--c-yellow);
   border-bottom: var(--border);
 }
 .temuan-body { padding: 14px 16px; }
@@ -795,7 +802,7 @@ body {
   border-style: dashed;
   border-radius: var(--radius);
   padding: var(--space-4);
-  background: #EDE9FE;
+  background: #EDECEA;
   margin-top: 12px;
 }
 .capa-tab {
@@ -825,7 +832,7 @@ body {
 }
 .capa-tab-btn:last-child { border-right: none; }
 .capa-tab-btn:hover      { background: var(--c-yellow); }
-.capa-tab-btn.active     { background: var(--c-purple); color: var(--c-black); }
+.capa-tab-btn.active     { background: var(--c-chrome); color: var(--c-chrome-text); }
 
 /* ══════════════════════════════════════════════════════════════
    DUE DATE — Inline chips dengan border
@@ -865,14 +872,14 @@ body {
   display: flex;
   gap: 8px;
   padding: 12px var(--space-4);
-  background: var(--c-purple);
+  background: var(--c-chrome);
   border-bottom: var(--border);
   overflow-x: auto;
   flex-shrink: 0;
 }
 .filter-bar::-webkit-scrollbar { display: none; }
 .filter-btn {
-  border: 2px solid var(--c-black);
+  border: 2px solid var(--c-chrome-text);
   border-radius: var(--radius-sm);
   font-family: var(--font-sans);
   font-size: 10px;
@@ -880,21 +887,21 @@ body {
   padding: 7px 13px;
   cursor: pointer;
   background: transparent;
-  color: var(--c-black);
+  color: var(--c-chrome-text);
   white-space: nowrap;
   transition: all 0.1s ease;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   box-shadow: 2px 2px 0px var(--c-black);
 }
-.filter-btn:hover  { background: var(--c-yellow); color: var(--c-black); transform: translateY(-2px); }
-.filter-btn.active { background: var(--c-yellow); color: var(--c-black); transform: translate(2px,2px); box-shadow: none; }
+.filter-btn:hover  { background: var(--c-yellow); color: #111111; transform: translateY(-2px); border-color: #111111; }
+.filter-btn.active { background: var(--c-yellow); color: #111111; transform: translate(2px,2px); box-shadow: none; border-color: #111111; }
 
 /* ══════════════════════════════════════════════════════════════
    ROLE TABS
    ══════════════════════════════════════════════════════════════ */
 .role-tabs {
-  background: var(--c-purple);
+  background: var(--c-chrome);
   padding: 12px var(--space-4);
   display: flex;
   gap: 8px;
@@ -914,8 +921,8 @@ body {
 }
 .role-tab.inactive {
   background: transparent;
-  border: 2px solid var(--c-black);
-  color: var(--c-black);
+  border: 2px solid var(--c-chrome-text);
+  color: var(--c-chrome-text);
   box-shadow: none;
 }
 
@@ -951,7 +958,7 @@ body {
   margin-bottom: 14px;
 }
 .widget-header {
-  background: var(--c-purple);
+  background: var(--c-chrome);
   padding: 11px var(--space-4);
   display: flex;
   align-items: center;
@@ -961,7 +968,7 @@ body {
 .widget-header-title {
   font-size: 12px;
   font-weight: 800;
-  color: var(--c-black);
+  color: var(--c-chrome-text);
   font-family: var(--font-sans);
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -1014,7 +1021,7 @@ body {
   bottom: 78px;
   width: 58px; height: 58px;
   border-radius: 50%;
-  background: var(--c-purple);
+  background: var(--c-yellow);
   border: 4px solid var(--c-black);
   color: var(--c-black);
   font-size: 26px;
@@ -1095,7 +1102,7 @@ body {
    LOGIN SCREEN
    ══════════════════════════════════════════════════════════════ */
 .login-wrap {
-  background: var(--c-purple);
+  background: var(--c-chrome);
   flex: 1;
   display: flex;
   flex-direction: column;
